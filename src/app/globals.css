@@ -2,25 +2,32 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1a1a;
+  --primary-blue: #0071ce;
+  --accent-yellow: #ffdb00;
+  --gray-light: #f7f9fa;
+  --gray-medium: #dae1e7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-blue: var(--primary-blue);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-gray-light: var(--gray-light);
+  --color-gray-medium: var(--gray-medium);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #005aab 100%);
 }
